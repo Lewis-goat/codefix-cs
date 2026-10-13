@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Únik vody v kávovaru De'Longhi: alarm 3963 a metoda mokré stopy"</title>
+<meta name="description" content=""Alarm úniku vody znamená vodu v základně kávovaru De'Longhi — skrytý kód 3963. Jak stroj bezpečně vysušit, vystopovat netěsnost a kdy přestat."">
+<link rel="canonical" href="https://cs.codefixcoffee.com/blog/delonghi-leak-alarm-3963/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/delonghi-leak-alarm-3963/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zpět na web</a></span></div></header>
+<main>
+<h1>"Únik vody v kávovaru De'Longhi: alarm 3963 a metoda mokré stopy"</h1>
+<p class="meta">2026-10-13</p>
+<p>Alarm úniku vody je jediné hlášení De'Longhi, které byste nikdy neměli odklepnout a zkusit to znovu. Stejně jako celá rodina hlášení zobrazuje stroj slova, nikoli číslo — novější modely si ale v pozadí zaznamenávají číselnou poruchu a u alarmu úniku jde o kód 3963. Právě ten skrytý log čte servis; na našich stránkách stojí slova a číslo vedle sebe, začít můžete u <a href="https://cs.codefixcoffee.com/delonghi/magnifica-dinamica/leak-alarm-code-3963/">referenční stránky alarm úniku vody (kód 3963)</a>. Níže vysvětlíme, co hlášení znamená, v jakém pořadí kontrolovat a jak únik dovést až ke zdroji.</p>
+<h2>Co vám alarm říká</h2>
+<p>V základně strojů Magnifica, Dinamica i PrimaDonna je umístěné čidlo s jediným úkolem: ohlásit vodu tam, kde nemá co pohledávat. Když se spustí, znamená alarm úniku vody přesně jednu věc — voda se dostala do základny. Neříká ale, odkud přitekla; to už je vaše práce.</p>
+<p>Na seznamu podezřelých figurují především O-kroužek ventilu nádrže, těsnění infuzoru, O-kroužky topného tělesa a odvodňovací ventil. Skoro všechny jsou to díly v řádu deseti euro — stojí za to je vystopovat, ne nad nimi truchlit.</p>
+<h3>Nejprve bezpečnost</h3>
+<p>Voda i napájecí deska sdílejí stejnou základnu, a proto jde o bezpečnost před diagnózou.</p>
+<ol>
+<li>Vytáhněte vidlici ze zásuvky. Ne pohotovostní režim — opravdu vytáhněte.</li>
+<li>Vyjměte odkapávací vaničku a nádobu na slupky a základnu vytřete do sucha.</li>
+<li>Před setřením posledních zbytků si zapamatujte, kde se voda shromáždila — je to první stopa pro hledání.</li>
+<li>Dokud stroj není zcela suchý a únik opravený, znovu jej nespouštějte.</li>
+</ol>
+<h2>Metoda mokré stopy</h2>
+<p>Voda v kávovaru podléhá gravitaci, takže po sobě vždy zanechá stopu: vlhký pruh od zdroje dolů ke kaluži, často s přílivovými čarami nebo bledou linkou zaschlého vodního kamene. Metoda mokré stopy znamená postupovat po té stopě zpět — od nejhlubšího bodu kaluže vzhůru k nejvýše položenému vlhkému dílu, se svítilnou a suchým prstem. Slábnoucí stopa prozrazuje, že jste zdroj překročili; vraťte se o jeden díl zpět.</p>
+<p>Každý krok následujícího pořadí je levnější a méně zásahový než ten za ním; když už první krok zodpoví otázku, nic neotevíráte.</p>
+<h3>Bezpečné pořadí kontrol</h3>
+<ol>
+<li><strong>Dosednutí nádrže a těsnění ventilu.</strong> Sejměte nádrž a prohlédněte O-kroužek v místě, kde ventil nádrže doléhá na stroj. Pořádné zasazení nádrže nic nestojí a zploštělý či prasklý O-kroužek je nejlevnější únik, jaký lze zažít.</li>
+<li><strong>Těsnění infuzoru.</strong> Otevřete servisní dvířka, stiskněte obě červená tlačítka, vysuňte infuzor a prohlédněte jeho těsnění a výstup pod ním. Ztvrdlé těsnění dokáže týdny tiše potit, než si ho čidlo všimne.</li>
+<li><strong>Odvodňovací ventil.</strong> Prověřte odvodňovací ventil a jeho napojení — je to poslední z obvyklých podezřelých, kterého dosáhnete bez otevírání stroje.</li>
+<li><strong>Uvnitř krytu.</strong> Když mokrá stopa vede dovnitř krytu, musí se sejmout plášť: klasickými konci vnitřní stopy bývají O-kroužek topného tělesa nebo prasklá hadička a obojí je po otevření na očích. Nápady, jak se do vnitřků podobných přístrojů dostat, nabízí třeba <a href="https://www.ifixit.com">iFixit</a>.</li>
+</ol>
+<p>Dokud máte servisní dvířka otevřená, otřete i kontakty za nádobou na slupky: vlhká sedlina tam způsobí falešné hlášení <a href="https://cs.codefixcoffee.com/delonghi/magnifica-dinamica/insert-grounds-container-empty-grounds-container/">Insert Grounds Container / Empty Grounds Container</a>.</p>
+<h2>Kolik stojí díly</h2>
+<ul>
+<li>Sady O-kroužků ventilu nádrže a topného tělesa: 5 až 15 €.</li>
+<li>Odvodňovací ventil: 10 až 20 €.</li>
+<li>Hadičky se mezi modely cení velmi rozdílně — před objednávkou si porovnejte číslo dílu.</li>
+<li>Servis výrobce mimo záruku u plnoautomatického stroje: obvykle 250 až 500 € včetně zpětné dopravy; u výměny jediného dílu bývají nezávislé opravny levnější.</li>
+</ul>
+<h2>Kdy skončit a předat stroj servisu</h2>
+<p>Přirozené zastavení metody je u každého jinde:</p>
+<ul>
+<li>Když stopa míří dovnitř krytu a rozbírání stroje není vaše téma, skončete u odvodňovacího ventilu — předání tady vyjde levněji než zaplavená deska.</li>
+<li>Když se alarm do několika dní po výměně O-kroužku vrátí, pravý zdroj leží dál na cestě; opakované částečné opravy drží základnu mokrou a deska v ní bydlí.</li>
+<li>Když byla základna úplně suchá a alarm se stejně vrací, tahle diagnóza vyžaduje technika, ne svítilnu.</li>
+<li>Když je stroj v záruce, zvolte cestu výrobce.</li>
+</ul>
+<h3>Záruka a reklamace v Česku</h3>
+<p>U kávovaru koupeného v obchodě v Česku platí zákonná záruka 24 měsíců a reklamaci uplatňujete u prodejce, u kterého jste stroj pořídili. Dokud záruka běží, kryt stroje neotevírejte — neodborný zásah dovnitř může být důvodem k odmítnutí bezplatné reklamace. Reklamaci si nechte písemně potvrdit a stroj do servisu předáve důkladně vysušený.</p>
+<h2>Po opravě</h2>
+<p>Až je vše suché, těsněné a zpět smontované, počítejte s malým množstvím vzduchu ve vodním okruhu — rutinu s nadstavcem na horkou vodu popisuje stránka <a href="https://cs.codefixcoffee.com/delonghi/magnifica-dinamica/water-circuit-empty-fill-circuit/">Water Circuit Empty / Fill Circuit</a>. Alarm úniku má v rodině hlášení i mlhavějšího sourozence, <a href="https://cs.codefixcoffee.com/delonghi/magnifica-dinamica/general-alarm-code-1101-1512/">General Alarm (kód 1101 / 1512)</a>, za kterým většinou stojí infuzor. Celou rodinu hlášení najdete v <a href="https://cs.codefixcoffee.com/delonghi/">přehledové sekci De'Longhi</a>.</p>
+<p>Alarm úniku znepokojí, protože do jedné věty spojuje vodu a elektroniku. Ve skutečnosti jde o stroj, který se chrání, a za poruchou obvykle stojí těsnění levnější než sáček kávy. Vysušte jej, vytáhněte ze zásuvky, projděte mokrou stopu v pořadí a zastavte se tam, kde končí váš komfort.</p>
+</main>
+<footer>Návody na opravy a vysvětlení chybových kódů z codefixcoffee.com.</footer>
+</body></html>
