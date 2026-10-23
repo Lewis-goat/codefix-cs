@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Myčky nádobí GE: kódy C a poruchy vypouštění, plnění a ohřevu</title>
+<meta name="description" content="Kódy C1–C8 u myček GE pokrývají vypouštění, plnění a ohřev, plus 888 a CFE pro desky — a trik se servisním menu, který zobrazí poslední chybu.">
+<link rel="canonical" href="https://cs.codefixcoffee.com/blog/ge-dishwasher-c-codes/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/ge-dishwasher-c-codes/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zpět na web</a></span></div></header>
+<main>
+<h1>Myčky nádobí GE: kódy C a poruchy vypouštění, plnění a ohřevu</h1>
+<p class="meta">2026-10-23</p>
+<p>Myčky nádobí GE hlásí poruchy jako kódy C na displeji: C1 až C8, dále H2O při potížích s plněním a 888 nebo CFE, když je zle samotným deskám. Na rozdíl od většiny výrobců GE žádný oficiální seznam významů nezveřejňuje, takže majitelé párují dvouznakový kód se symptomem vlastními silami. Originální podporu a dokumentaci hledejte na <a href="https://www.geappliances.com">geappliances.com</a>. <a href="https://cs.codefixcoffee.com/ge/dishwasher/">Sekce myček GE</a> pokrývá všechny kódy; tento příspěvek prochází jednotlivé rodiny v pořadí, v jakém je pravděpodobně potkáte, a končí trikem se servisním menu, který vytáhne naposledy uloženou chybu.</p>
+<h2>Rodina vypouštění: C1 až C3</h2>
+<p>Tři kódy, jeden systém. C1 znamená, že odčerpávací čerpadlo běželo déle než dvě minuty, aniž by vyprázdnilo vanu (u některých starších modelů místo toho hlásí zaseknutou klávesu); C2 říká, že čerpadlo neběželo vůbec nebo byla hadice zcela ucpaná; C3 je obecné „nevypouští se správně“. Okruh podezřelých se přitom nikdy nemění — ucpaný filtr a odkalová nádržka, přiskříknutá vypouštěcí hadice, nově namontovaný drtič odpadu s nevyraženou zátkou nebo vadné odčerpávací čerpadlo. Začněte bezplatnou prací podle <a href="https://cs.codefixcoffee.com/ge/dishwasher/c1/">stránky C1</a>: vyjměte dolní koš, vyčistěte filtr s odkalovou částí a zkontrolujte hadici pod dřezem. Vadné odčerpávací čerpadlo, které bzučí nebo mlčí, stojí €40 až €80.</p>
+<h2>Plnění: C4, C5 a H2O</h2>
+<ul>
+<li><strong>C4</strong> — přetečení, nebo dvojité naplnění po výpadku proudu. Vstupní ventil se zcela nezavírá, nebo plovákový spínač, který má plnění zastavit, drží v nečistotách. Kontrolu plováku popisuje <a href="https://cs.codefixcoffee.com/ge/dishwasher/c4/">stránka C4</a>; napouští-li se vana i při vypnutém stroji, ventil prosakuje a musí se vyměnit (€25 až €50).</li>
+<li><strong>C5</strong> — nízké naplnění: za stanovený čas nepřišlo dost vody. Přívodní ventil jen pootevřený, ucpané sítko na vstupu nebo slabnoucí plnicí ventil.</li>
+<li><strong>H2O</strong> — žádná voda. Dřív než se čehokoli dotknete, ověřte, že je uzávěr pod dřezem otevřený a hadice není přehnutá.</li>
+</ul>
+<h2>Ohřev: C6 až C8</h2>
+<p>C6 hlásí, že voda ani po prodlouženém ohřevu nedosáhla zhruba 49 °C (120 °F). Nechte před spuštěním programu protéct kuchyňský kohoutek, dokud nepoteče teplá voda — při studeném přívodu ohřev prostě nemusí stihnout. Vychází-li nádobí studené a mokré, změřte topné těleso na spojitost; těleso stojí €30 až €60 a tepelný pojistkový termostat €10 až €20. C7 patří obvodu teplotního čidla (termistoru) — typicky uvolněná zásuvka nebo levné čidlo, byť u některých modelů týž kód pokrývá místo něj čidlo kalnosti. C8 bývá mechanická záležitost, ne teplotní: přihrádka na detergent se neotevřela, protože ji blokovalo vložené nádobí, nebo zaschlý prášek zasekl zámek.</p>
+<h2>888 a CFE: kódy desek</h2>
+<p>Je-li závada elektronická a ne hydraulická, GE to sdělí na rovinu. <a href="https://cs.codefixcoffee.com/ge/dishwasher/888/">888</a> znamená, že hlavní řídicí deska neprošla vlastním autotestem — nejčastěji po přepětí z bouřky, které poškodí paměťový registr, výjimečně proto, že netěsnost desku zmáčela. <a href="https://cs.codefixcoffee.com/ge/dishwasher/cfe/">CFE</a> říká, že ovládací panel ve dveřích přestal s hlavní deskou komunikovat; viníkem bývá prošlapaný svazek kabelů v oblasti pantů dvířek nebo vlhký konektor. Obojí začíná restartem jističe a obě končí výměnou desky, vrátí-li se kód: €90 až €200 za hlavní desku, €60 až €120 za panel.</p>
+<h2>Trik se servisním menu: přečtěte si poslední chybu</h2>
+<p>Myčka, která se týdny zastavovala, před vámi často stojí bez jediné hlášky. Deska si ale pamatuje a na většině myček GE se jí můžete zeptat:</p>
+<ol>
+<li>Otevřete dvířka naplno.</li>
+<li>Podržte tlačítko Start po dobu pěti sekund a vstupte tak do servisního menu.</li>
+<li>Má-li model displej skrytý za lištou dvířek, stiskněte místo toho společně Select Cycle a Start po pět sekund.</li>
+<li>Přečtěte z displeje poslední uloženou chybu a dvířka zavřete.</li>
+<li>Chcete-li resetovat samotnou desku, vypněte jističem napájení na 60 sekund.</li>
+</ol>
+<p>Kód si poznamenejte, vymažte jej a spusťte cyklus: uložené C3 před třemi týdny plus čerstvé C3 dnes znamená skutečnou poruchu vypouštění, ne nahodilou závadu.</p>
+<h2>Co opravy stojí</h2>
+<p>Téměř každá oprava kódu C se vejde do čtveřice čerpadlo, ventil, čidlo, dávkovač — díly za €10 až €80 — plus vaše práce, umíte-li bezpečně odpojit napájení a sejmout panel. Výjimkou jsou desky za €90 až €200. Výjezd technika na spotřebiče přijde na €120 až €250 za diagnózu a díl, což se u kódů desek vyplatí a u ucpaného filtru téměř nikdy.</p>
+<h3>Provoz myčky GE v Česku</h3>
+<p>Myčky GE patří na americký trh a do Česka se dostávají jen výjimečně, obvykle dovozem. Jsou konstruované pro napětí 120 V a frekvenci 60 Hz, takže připojení k naší síti vyžaduje transformátor a chování čerpadel či ohřevu se může i tak lišit. Drtič odpadu, který se v souvislosti s kódy C1 až C3 často uvádí mezi viníky, je v českých kuchyních vzácný — pokud ho nemáte, hledejte ucpaný sifon nebo hadici pod dřezem.</p>
+</main>
+<footer>Návody na opravy a vysvětlení chybových kódů z codefixcoffee.com.</footer>
+</body></html>
