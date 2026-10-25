@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kódy C u troub Samsung – rodina teplot chytrých sporáků</title>
+<meta name="description" content="Trouby Samsung a kódy C-21, C-24 a C-F2 – přehřátí dutiny, rychlý nárust teploty u ventilace a zpětná vazba chladicího ventilátoru. Postupy a ceny dílů.">
+<link rel="canonical" href="https://cs.codefixcoffee.com/blog/samsung-oven-c-codes/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/samsung-oven-c-codes/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zpět na web</a></span></div></header>
+<main>
+<h1>Kódy C u troub Samsung – rodina teplot chytrých sporáků</h1>
+<p class="meta">2026-10-25</p>
+<p>Sporáky a vestavné trouby Samsung — řady NE a NX a jejich příbuzní NV a NZ — mluví dvěma „dialekty" chyb. Dvojité kódy jako E-08 nebo E-27 pokrývají topné části trouby, krátké kódy jako SE a tE hlásí potíže ovládacího panelu. Mezi nimi stojí rodina C: C-21, C-24 a C-F2, tedy teplotní a ventilační kódy sledované v <a href="https://cs.codefixcoffee.com/samsung-oven-error-codes/">rejstříku kódů troub Samsung</a>. Právě těm věnujte nejvíc pozornosti — alespoň jeden z nich znamená, že se trouba doopravdy přehřála. Oficiální podklady k servisu najdete u <a href="https://www.samsung.com/cz/support/">zákaznické podpory Samsung</a>.</p>
+<h2>Rejstřík chyb tu nenajdete</h2>
+<p>Samsung u troub nezpřístupňuje žádný uživatelský chybový log. Kód zůstává na displeji, dokud neodstraníte příčinu, nebo dokud nepřerušíte napájení jističem — u procedur rodiny C počítejte s pěti až deseti minutami. Vrátí-li se kód i po resetu, berte ho jako skutečnou závadu, ne jej resetujte znovu a doufejte v náhodu.</p>
+<h3>Pro české podmínky</h3>
+<p>Vestavné trouby bývají u nás standardně napojené na vlastní jistič v bytovém rozvaděči, takže reset provádějte tam, ne manipulací se zástrčkou. Při zabudování do starších kuchyňských skříněk si ověřte také vůle podle instalačního manuálu — těsné obezdění bez prostoru pro ventilaci přehřívá elektroniku a přispívá ke kódům C-24 i C-F2.</p>
+<h2>C-21: odstávka při přehřátí</h2>
+<p><a href="https://cs.codefixcoffee.com/samsung/range-wall-oven/c-21/">C-21</a> oznamuje, že bezpečnostní monitor zaznamenal vnitřní teplotu trouby mimo bezpečné pásmo a deska proto zastavila topení. Uživatelé popisovali sporáky, které se před zobrazením kódu nebezpečně rozpálily — jde tedy o signál k zastavení pečení, ne o drobnost. Nejčastějším viníkem je teplotní čidlo dutiny nebo jeho kabeláž; hlavní deska PCB je až druhým podezřelým.</p>
+<ol>
+<li>Vypněte jistič na pět až deset minut a jedenkrát troubu otestujte. Vrátí-li se C-21 při dalším nahřívání, jde o skutečnou závadu.</li>
+<li>Odpojte sporák, vyšroubujte dva šrouby držící sondu čidla na zadní stěně dutiny a vytáhněte kabeláž dopředu, abyste ji mohli odpojit.</li>
+<li>Změřte čidlo multimetrem: při pokojové teplotě je zdravé zhruba při 1 080 Ω. Rozepnutý obvod nebo jasně nesmyslná hodnota znamená výměnu.</li>
+<li>Prohlédněte konektor kabeláže v místech, kde prochází poblíž topného tělesa — přepálený konektor vyvolá tentýž kód.</li>
+<li>Je-li čidlo v pořádku a trouba stále hlásí závadu, deska špatně reguluje topné těleso; to je oprava na úrovni servisu.</li>
+</ol>
+<h2>C-24: kontrola rychlého nárůstu</h2>
+<p><a href="https://cs.codefixcoffee.com/samsung/range-wall-oven/c-24/">C-24</a> se detekuje v okolí ventilace a prostoru s elektronikou: oddělení s deskami se ohřívá rychleji, než deska očekává. Samsung uvádí rodinu C-24 a C-25 jako přehřátí topení ve vztahu k této ventilační oblasti. V praxi se příčina rozdělí tři směry — chladicí ventilátor, který se nikdy nerozběhne, zablokovaný průtok vzduchu kolem sporáku nebo stárnoucí nadteplotní termistor, který zdravou oblast hlásí jako přehřátou.</p>
+<p>Diagnostika spočívá hlavně v poslechu a pohledu. Po resetu jističe spusťte pečení a zaposlouchejte se, zda konvekční i chladicí ventilátor při nahřívání trouby nastupují; ticho je jasná odpověď. Zkontrolujte instalační vůle a to, zda skříňky, alobal nebo prach neblokují větrací otvory pod i za sporákem. S vypnutým napájením lze nadteplotní termistor přeměřit na jeho konektoru — leží ve stejné třídě zhruba 1 000 Ω jako čidlo dutiny a rozepnutý nebo „plující" kus patří k výměně. Je-li ventilátor mrtvý, vyměňte jej dřív, než se upeče řídicí deska: teplo je příčina a deska je jen oběť.</p>
+<h2>C-F2: zpětná vazba chladicího ventilátoru</h2>
+<p><a href="https://cs.codefixcoffee.com/samsung/range-wall-oven/c-f2/">C-F2</a> vypadá jako kód přehřátí, většinou ale není. Rodina C-F znamená, že sledovaná komponenta se nehlásí, a u C-F2 jde o obvod chladicího ventilátoru: deska displeje nedostává zpětný signál, který očekává. Buď ventilátor opravdu nestartuje, nebo má uvolněný či přepálený konektor, nebo selhala linka zpětné vazby k desce.</p>
+<p>Postupujte popořadě. Po resetu jističe troubu zahřejte a ověřte, zda se vrtule ventilátoru fyzicky točí. Točící se ventilátor s trvajícím kódem ukazuje na zpětnou vazbu — přesaďte konektor ventilátoru na desce a hledejte tepelně zabarvené piny. Tichý ventilátor znamená kontrolu zaseknuté vrtule (prach nebo spadlý šroub za panelem) a následně měření vinutí na rozepnutý obvod. Opravy ventilátoru a konektoru jsou levné; C-F2, který přežije obě prověrky, směřuje na vstup hlavní desky.</p>
+<h2>Kolik stojí díly</h2>
+<p>Teplotní čidlo dutiny stojí 15–40 € a jeho výměna je práce na deset minut se šroubovákem — jde o nejčastější opravu celé rodiny. Chladicí ventilátor vyjde na 40–90 €, kabeláž na 10–20 €. Drahou položkou je hlavní deska PCB za 150–300 € a po jejím nákupu byste se měli ohlížet až po ověření čidla i ventilátoru. Návštěva technika stojí zhruba 120–250 € za diagnostiku plus díl; u sporáku mimo záruku se závadou na úrovni desky je rozumné nejdřív získat tuto nabídku a teprve pak objednávat díly.</p>
+<p>Pro celou rodinu platí jediné pravidlo — C-21 opakovaně neresetujte a dál nepečte. Kód znamená, že deska už zaznamenala teplotu, která se jí nelíbila, a další překročení může být výš na stupnici.</p>
+</main>
+<footer>Návody na opravy a vysvětlení chybových kódů z codefixcoffee.com.</footer>
+</body></html>
