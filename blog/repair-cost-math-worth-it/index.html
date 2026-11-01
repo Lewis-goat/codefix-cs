@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Vyplatí se oprava? Poctivá matematika"</title>
+<meta name="description" content=""Matematika oprav u chybových kódů: cena dílu a práce proti třídě přístroje, mantinky podle kategorie a kdy zvítězí renovovaný kus nad cenou opravy."">
+<link rel="canonical" href="https://cs.codefixcoffee.com/blog/repair-cost-math-worth-it/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/repair-cost-math-worth-it/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zpět na web</a></span></div></header>
+<main>
+<h1>"Vyplatí se oprava? Poctivá matematika"</h1>
+<p class="meta">2026-11-01</p>
+<p>Chybový kód na displeji je jen půlka diagnózy. Druhou půlku tvoří aritmetika: dá se tento přístroj ještě rozumně opravit, nebo se z něj dnes stane dárcem náhradních dílů? Poctivá odpověď stojí na třech proměnných — kolik stojí díl, kdo ho bude měnit a do jaké třídy přístroje vlastně patří. Nostalgie po stroji koupeném před lety v této rovnici nefiguruje.</p>
+<h2>Nejdřív dvě čísla</h2>
+<p>Začněte u dnešní pořizovací hodnoty, ne u původní kupní ceny. To, co jste před třemi lety zaplatili, je pro rozhodnutí irelevantní; důležité je, kolik nyní stojí nový přístroj stejné třídy. K tomu přičtěte realistickou cenu opravy: díl, práci servisu (pokud si výměnu neuděláte sami) a malou rezervu na druhou závadu, která se za tu první občas skrývá.</p>
+<p>Oblíbené pravidlo říká, že se oprava vyplatí, dokud nepřesáhne polovinu ceny nového kusu. Jako výchozí bod to dává smysl, mantinka se ale podle třídy přístroje skutečně posouvá — v obou směrech.</p>
+<h2>Kolik skutečně stojí nejčastější kódy</h2>
+<p>Povzbudivé zjištění z opravárenských tabulek: kódy, se kterými se majitelé setkávají nejčastěji, leží na ceníku dílů na opačném konci, u těch levných.</p>
+<ul>
+<li><strong>Jura Error 8</strong> oznamuje poruchu cyklu varné jednotky a většinu případů vyřeší čisticí tableta, tedy 15–25 € za balení. Ani horší scénáře nejsou dramatické: varná jednotka 80–150 €, pohon 40–70 €. Reference <a href="https://cs.codefixcoffee.com/jura/automatic-machines/error-8/">Error 8</a> ji popisuje jako kód, na který obvykle stačí tableta — a čísla dávají za pravdu.</li>
+<li><strong>Jura Error 2</strong>, nejčastější závada Jury vůbec, má i podobu, která nestojí nic: stroj držený pod zhruba 10 °C si topení zablokuje, dokud se sám nezahřeje. Skutečná porucha — čidlo termobloku nebo kabely tepelné pojistky — vyžaduje originální čidlo za 25–40 € a sadu kabelů za 15–30 €. Obě větve rozebírá <a href="https://cs.codefixcoffee.com/jura/automatic-machines/error-2/">stránka Error 2</a>.</li>
+<li><strong>Sušička GE s kódem E4</strong> znamená přepálenou tepelnou pojistku za 5–15 €, případně nadlimitní termostat za 10–25 € — u <a href="https://cs.codefixcoffee.com/ge/dryer/e4/">sušičky, která stále běží</a>, asi nejlevnější oprava, jaká existuje. Podmínka: je zároveň nutné odstranit překážku v proudění vzduchu, která pojistku zničila, jinak potká novou stejný osud.</li>
+<li><strong>Samsung E-27</strong> hlásí otevřený obvod teplotního čidla trouby. Díl stojí 20–40 € a <a href="https://cs.codefixcoffee.com/samsung/range-wall-oven/e-27/">oprava je hodnocena jako snadná</a>: dva šrouby uvnitř dutiny, zástrčka, hotovo.</li>
+<li><strong>Error 05 u Philips a Saeco</strong> je vzduch ve vodním okruhu a zapuštění čerstvě nasazeného filtru <a href="https://cs.codefixcoffee.com/philips-saeco/espresso-machines/error-05/">nic nestojí</a>.</li>
+</ul>
+<p>Se seznamem takových čísel se funkční přístroj skoro nikdy nevyplatí odeslat do šrotu.</p>
+<h2>Práce servisu mění celou rovnici</h2>
+<p>Na výsledku se podepisuje víc, kdo točí šroubovákem, než kolik stojí díl sám o sobě. Když si výměnu uděláte sami, zaplatíte jen díl. Jakmile se do toho pustí servis, počty se změní:</p>
+<ul>
+<li>Servis výrobce u plnoautomatického kávovaru mimo záruku obvykle vyjde na 250–500 € včetně zpětného přepravního; nezávislé servisy espresso strojů bývají u opravy jednoho dílu výrazně levnější.</li>
+<li>Výjezd technika k sušičce nebo sporáku se pohybuje mezi 120 a 250 € za diagnostiku včetně dílu.</li>
+</ul>
+<p>Čidlo za 30 € se tak na pultu servisu promění v opravu za 180 €. Nejde o podvod — platíte zkušenou ruku, test na servisním stole a záruku za provedenou práci — ale právě tohle číslo otázku rozhoduje.</p>
+<h2>Mantinky podle třídy přístroje</h2>
+<ol>
+<li><strong>Vstupní bean-to-cup, nový zhruba za 300–700 €.</strong> Klasické padesátiprocentní pravidlo stáhněte ke čtyřiceti procentům. Nabídka za 250 € u stroje za 500 € je špatný obchod, pokud nejde o téměř nový kus.</li>
+<li><strong>Střední třída, 700–1500 €.</strong> Standardní pravidlo platí beze změny: opravujte, dokud se celková cena drží pod polovinou pořizovací.</li>
+<li><strong>Prémiové stroje — řady Jura S, Z a GIGA, od 1500 €.</strong> Mantinku naopak povolte k 60 až 70 procentům. Dodávky dílů fungují, zpracování opravu odměňuje a nový kus je nepoměrně dražší.</li>
+<li><strong>Sušičky, trouby a ostatní bílá technika.</strong> Závady čidel, pojistek a spínačů se skoro vždy vyplatí řešit bez ohledu na věk; řídicí desky za 100–200 € se posuzují případ od případu. U spotřebičů GE pomohou s podklady a díly stránky <a href="https://www.geappliances.com">GE Appliances</a>.</li>
+</ol>
+<h2>Kdy porazí renovovaný kus opravu</h2>
+<p>Někdy je nejpoctivější odpovědí přestat. Tři situace míří tímto směrem:</p>
+<ul>
+<li>Nabídka servisu dosáhne nebo přesáhne cenu továrně renovovaného kusu — ten přichází se zárukou, oprava zpravidla ne.</li>
+<li>Vstupní stroj kolem desátého roku životnosti potřebuje velkou sestavu. Praktické vedení v <a href="https://cs.codefixcoffee.com/jura/">přehledu kódů Jura</a> to formuluje napřímo: u deset let staré vstupní E, ENA nebo Impressy srovnávejte nabídku s renovovaným kusem; u prémiových Z a GIGA se tatáž oprava vyplatí.</li>
+<li>Závady se řetězí — nejdřív čidlo, pak ventil, za rok řídicí deska. Stroje prostřednictvím chybových kódů dávají najevo, že stárnou.</li>
+</ul>
+<h3>Než zaplatíte: zkontrolujte záruku</h3>
+<p>V Česku se na každé koupené zboží vztahuje zákonná záruka 24 měsíců a její existenci nevyřadí ani to, že se vada projeví chybovým kódem. Než tedy zaplatíte za opravu z vlastní kapsy, vytáhněte doklad o nákupu a uplatněte reklamaci u prodejce; u novějších strojů může být oprava v autorizované servisu zdarma. Podmínky servisní podpory shrnuje i <a href="https://www.jura.com">oficiální stránka Jura</a>.</p>
+<p>Sečtěte čísla dřív, než seberete city. Pojmenujte díl, oceněte ho, připočtěte práci a obě hodnoty postavte proti dnešní ceně nového přístroje. Většina kódů takovou zátěž ustojí bez potíží. Ty ostatní vám něco říkaly celou dobu.</p>
+</main>
+<footer>Návody na opravy a vysvětlení chybových kódů z codefixcoffee.com.</footer>
+</body></html>
